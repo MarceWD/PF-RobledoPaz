@@ -249,9 +249,13 @@ body {
 .cont-footer {
     background-color: rgb(203, 131, 64);
     margin-top: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 100%);
+    column-gap: 1rem;
 }
 
 .logo-footer {
@@ -358,10 +362,12 @@ body {
 /*galería*/
 .background-galeria {
     background-image: url("../img/imgquienessomos.png");
-    height: 500px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     background-repeat: no-repeat;
     background-size:cover;
-    display: flex;
+
 }
 
 .slogan-galeria {
@@ -416,19 +422,31 @@ body {
 }
 
 .img-galeria {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.486);
+    box-shadow: 0 0 25px rgba(88, 88, 88, 0.486);
+}
+
+.container-galeria{
+    width: 100%;
+    height: 100%;
 }
 
 .renglon-imagen{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 100px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-content: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 50%);
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
 }
+
 
 .link-imagen-galeria:hover {
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.486);
@@ -459,3 +477,145 @@ body {
     text-decoration: none;
 }
 /* boton ordenar nav*/
+
+.main-galeria {
+    width: 100%;
+    height: 150vh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2,50%);
+    row-gap: 2rem;
+}
+
+/* estilos de mobile */
+
+@media screen and (max-width:576px){
+    header{
+        justify-content: space-between;
+    }
+
+    .main-galeria{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2,50%);
+        column-gap: 1.5rem;
+    }
+
+    main .slogan-galeria{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 18%) 3fr;
+        margin: 0;
+
+    }
+
+    main .background-galeria{
+        padding-top:50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 80px;
+        background-position: -150px;
+        height: 100vh;
+    }
+
+    main .titulo-galeria{
+        grid-row: span 2;
+    }
+
+    main .texto-galeria{
+        grid-row: span 2;
+    }
+
+    main .renglon-imagen{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4,25%);
+        column-gap: 1.5rem;
+        row-gap: 1.5rem;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    main .container-galeria{
+     
+    }
+
+    main .img-galeria{
+        width: 100%;
+        height: 100%;
+        display: cover;
+    }
+
+    main .img-cuatro{
+        grid-column: span 2;
+    }
+
+    main .boton-order-galeria{
+        font-family: "Poetsen One", sans-serif;
+        font-size: 1.2rem;
+        color: rgba(36, 20, 1); 
+        letter-spacing: 1.5px;
+        text-decoration: none;
+        background-color: rgb(250, 189, 59);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 10px;
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-top: 30px;
+        align-content: center;
+    }
+
+    footer .cont-footer{
+        width: 100%;
+        height: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2,50%);
+        margin-top: 150px;
+        column-gap: 1rem;
+        row-gap: 1rem;
+        padding-top: 2cqb;
+        padding-bottom: 20px;
+    }
+
+    footer .logo-footer{
+        width: 100%;
+        object-fit: fill;
+        grid-column: span 2;
+    }
+
+    footer .links-footer{
+        width: 100%;
+        margin-top: 40px;
+        grid-column: span 2;
+    }
+
+    footer .rs-footer{
+        grid-column: span 2;
+    }
+
+    footer .text-footer{
+        padding: 3px;
+    }
+
+    .icon-sobre, .icon-corazon{
+        display: none;
+    }
+
+    .vertical-line{
+        display: none;
+    }
+
+    footer .rs-footer .siguenos-rs-footer .text-footer{
+        display: none;
+    }
+
+}
