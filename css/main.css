@@ -182,7 +182,7 @@ body {
 .card-alimentos {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 100%;
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.438); 
@@ -192,14 +192,19 @@ body {
 }
 
 .cont-alimentos {
-    display: flex;
-    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 15%);
+    column-gap: 2rem;
     justify-content: center;
     align-items: center;
     margin-top: 40px;
 }
 
 .titulo-alimento {
+    width: 100%;
+    text-align: center;
     padding: 20px;
     font-size: 1.5rem;
     font-family: "Poppins", sans-serif;
@@ -213,18 +218,21 @@ body {
 /* seccion de pasos para realizar tu pedido*/
 .cont-pasos-pedido {
     background-color: rgb(203, 131, 64);
-    height: 250px;
+    width: 100%;
+    height: 100%;
     margin-top: 40px;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100%;
+    row-gap: 1rem;
     align-items: center;
     justify-content: center;
 }
 
 .cont-pasos {
     background-color: white;
-    width: 30%;
-    height: 200px;
+    width: 90%;
+    height: 90%;
     border-radius: 10px;
     margin: 20px;
     text-align: center;
@@ -279,6 +287,21 @@ body {
     text-decoration: underline;
 }
 
+.text-footer-wa{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.text-footer-wa:hover{
+    text-decoration: underline;
+}
+
+.siguenos-text{
+    display: none;
+}
+
 .rs-footer {
     display: flex;
     flex-direction: row;
@@ -310,6 +333,8 @@ body {
     margin-bottom: 30px;
     font-family: "Bad Script", cursive;
     font-size: 2.5rem;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 .text-quienessomos {
@@ -494,6 +519,8 @@ body {
         justify-content: space-between;
     }
 
+    /*Media queries utilizados en la seccion galeria*/
+
     .main-galeria{
         width: 100%;
         height: 100%;
@@ -577,29 +604,33 @@ body {
     footer .cont-footer{
         width: 100%;
         height: 100%;
+        display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2,50%);
+        grid-template-rows: repeat(1, 100%);
         margin-top: 150px;
         column-gap: 1rem;
         row-gap: 1rem;
         padding-top: 2cqb;
         padding-bottom: 20px;
+        
     }
 
     footer .logo-footer{
-        width: 100%;
-        object-fit: fill;
-        grid-column: span 2;
+        width: 150%;
+        height: 100%;
+        object-fit: contain;
+        grid-column: span 1;
+        grid-row: span 1;
     }
 
     footer .links-footer{
         width: 100%;
-        margin-top: 40px;
-        grid-column: span 2;
+
+        grid-column: span 1;
     }
 
     footer .rs-footer{
-        grid-column: span 2;
+        grid-column: span 1;
     }
 
     footer .text-footer{
@@ -618,4 +649,137 @@ body {
         display: none;
     }
 
+    .redes-icons{
+        display: flex;
+        flex-direction: row;
+    } 
+
+    .redes-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .siguenos-text{
+        display: block;
+        text-decoration: none;
+        color: white;
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+
+    .icon-instagram{
+        width: 30%;
+        height: 30%;
+    }
+
+    .icon-facebook{
+        width: 30%;
+        height: 30%;
+    }
+
+    .icon-whatsapp{
+        width: 30%;
+        height: 30%;
+    }
+
+    .text-footer-wa{
+        text-align: center;
+    }
+
+
+    .siguenos-rs-footer{
+        margin-right: 10px;
+    }
+
+    /*FIN - Media queries utilizados en la seccion galeria*/
+
+    /*Media queries utilizados en la seccion Somos*/
+
+    .cont-valores{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 1rem;
+        row-gap: 4rem;
+    }
+
+    .valores-container{
+        width: 100%;
+    }
+
+
+    /*FIN - Media queries utilizados en la seccion Somos*/
+
+
+    /*Media queries utilizados en la seccion Alimentos*/
+    .youtube-frame{
+        width: 90%;
+
+    }
+    /*FIN - Media queries utilizados en la seccion Alimentos*/
+
+
+    .cont-logo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+    }
+
+    .slogan{
+        width: 90%;
+        border-radius: 10px;
+        align-items: center;
+        
+    }
+
+    .slogantext{
+        color: white;
+        font-family: "Edu TAS Beginner", cursive;
+        font-weight:500;
+        padding-top: 20px;  
+        padding-left: 10px;
+        text-align: center;
+    }
+
+    .button-order-slogan{
+        margin-left: 20%;
+    }
+
+    .cont-alimentos{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 1rem;
+        row-gap: 1rem;
+        padding: 20px;
+    }
+
+    .card-alimentos{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+    }
+
+    .titulo-alimento{
+        font-size: 1rem;
+    }
+
+    .cont-pasos-pedido{
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, 1fr);
+    }
 }
+
+
+
