@@ -1,0 +1,116 @@
+$color_orange: rgb(203, 131, 64);
+$color_orange_light:  rgb(250, 189, 59);
+$color_custom_black:rgba(36, 20, 1);
+$color_white: white;
+$color_blanchedalmond: blanchedalmond;
+
+$font_family_poetsen_sans:"Poetsen One", sans-serif;
+
+$display_flex: flex;
+
+$padding_top_bottom_5px: 5px;
+$padding_left_right_20px: 20px;
+$padding_top_bottom_10px: 10px;
+
+
+/*barra de navegacion inicio*/
+
+/*background barra de navegacion*/
+.div-menu {
+    background-color: $color_orange;
+    display: $display_flex; 
+    flex-direction: row;
+    overflow: hidden; 
+}
+
+/*contenedor menu izq de barra de navegacion*/
+.cont-menu-left {
+    width: 70%;
+    justify-content: space-evenly;
+    display: $display_flex;
+    flex-direction: row;
+    overflow: hidden;
+    padding-top: $padding_top_bottom_5px;
+    padding-bottom: $padding_top_bottom_5px;
+}
+
+/*contenedor menu derecho boton ordenar*/
+.menu-order {
+    width: 30%;
+    justify-content: right;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: $padding_top_bottom_5px;
+    padding-bottom: $padding_top_bottom_5px;
+}
+
+.menu-order-button {
+    font-family: $font_family_poetsen_sans;
+    font-size: 1.2rem;
+    color: $color_custom_black; 
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    background-color: $color_orange_light;
+    padding-top: $padding_top_bottom_10px;
+    padding-bottom: $padding_top_bottom_10px;
+    padding-left: $padding_left_right_20px;
+    padding-right: $padding_left_right_20px;
+    border-radius: 10px;
+    margin-right: 75px;
+
+    &:hover{
+        box-shadow: 0 0 25px $color_white;
+        text-decoration: underline;
+        transform: scale(1.05,1.05);
+    }
+}
+
+/*botones de menu de barra de navegacion*/
+.style-menu {
+    font-family: $font_family_poetsen_sans;
+    font-size: 1.2rem;
+    color: $color_white;
+    letter-spacing: 1.5px;
+    padding: 20px;
+
+    &:link{
+        text-decoration: none;
+    }
+
+    &:hover{
+        color: $color_custom_black;
+        background-color: $color_blanchedalmond;
+        border-radius: 10px;
+        padding-top: $padding_top_bottom_10px;
+        padding-bottom: $padding_top_bottom_10px;
+        padding-left: $padding_left_right_20px;
+        padding-right: $padding_left_right_20px;
+        text-decoration: underline;
+    }
+
+}
+
+.style-menu-active {
+    font-family: $font_family_poetsen_sans;
+    font-size: 1.2rem;
+    color: $color_custom_black;
+    letter-spacing: 1.5px;
+    background-color:$color_blanchedalmond;
+    border-radius: 10px;
+    padding-top: $padding_top_bottom_10px;
+    padding-bottom: $padding_top_bottom_10px;
+    padding-left: $padding_left_right_20px;
+    padding-right: $padding_left_right_20px;
+    text-decoration: underline;
+
+    &:hover{
+        text-decoration: underline;
+        color: $color_custom_black;
+    }
+}
+
+.button {
+    padding: 10px; 
+    text-align: center;
+}
+/*barra de navegacion fin*/

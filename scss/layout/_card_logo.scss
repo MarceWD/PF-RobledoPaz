@@ -1,0 +1,52 @@
+$percent_35: 35%;
+
+$color_orange: rgb(203, 131, 64);
+$color_white: white;
+
+$font_family_edu_cursive: "Edu TAS Beginner", cursive;
+
+/*logo imagen de incio*/
+.logo-inicio { 
+    box-shadow: 0 0 25px $color_orange;
+    padding: 15px;
+    background-color: $color_white;
+    border-radius: border_10px;
+    z-index: 1;
+}
+
+.cont-logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+/* fin de logo imagen inicio*/
+
+/*card slogan junto a logo de inicio*/
+.slogan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color_orange;
+    height:200px;
+    width: 400px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 25px $color_orange;
+}
+
+.slogantext {
+    color: $color_white;
+    font-family: $font_family_edu_cursive;
+    font-weight:500;
+    padding-left: 30px;
+    padding-top: 20px;
+    font-size: 2rem;
+}
+
+.button-order-slogan {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+/*termina card slogan junto a logo de inicio*/

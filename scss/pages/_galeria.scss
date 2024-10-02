@@ -1,0 +1,122 @@
+$percent_100: 100%;
+$padding_10px: 10px;
+$padding_30px: 30px;
+$padding_20px: 20px;
+
+$border_10px: 10px;
+$margin_30px: 30px;
+$margin_60px: 60px;
+$percent_35: 35%;
+
+$color_custom_white:  rgba(255, 255, 255, 0.705);
+$color_orange_light: rgb(250, 189, 59);
+$color_white: white;
+$color_cutom_black: rgba(0, 0, 0, 0.486);
+$color_custom_black_2: rgba(88, 88, 88, 0.486);
+$color_custom_black_3: rgba(36, 20, 1);
+
+$font_family_poetsen_one: "Poetsen One", sans-serif;
+$font_family_bad_script: "Bad Script", cursive;
+
+@mixin sizes_100_percent{
+    width: $percent_100;
+    height: $percent_100;
+}
+
+.background-galeria {
+    @include sizes_100_percent;
+    background-image: url("../img/imgquienessomos.png");
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size:cover;
+
+}
+
+.slogan-galeria {
+    background-color: $color_custom_white;
+    height: 400px;
+    width: 500px;
+    margin: $margin_60px;
+    border-radius: $border_10px;
+    text-align: center;
+    display: inline-flex;
+    flex-direction: column;
+    padding: $padding_30px;
+}
+
+.boton-order-galeria {
+    font-family: $font_family_poetsen_one;
+    font-size: 1.2rem;
+    color: $color_custom_black_3; 
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    background-color: $color_orange_light;
+    padding-top: $padding_10px;
+    padding-bottom: $padding_10px;
+    padding-left: $padding_20px;
+    padding-right: $padding_20px;
+    border-radius: $border_10px;
+    margin-left: $percent_35;
+    margin-right: $percent_35;
+    margin-top: $margin_30px;
+
+    &:hover {
+        box-shadow: 0 0 25px $color_white;
+        text-decoration: underline;
+    }
+}
+
+.titulo-galeria {
+    font-family: $font_family_bad_script;
+    font-size: 1.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: $color_custom_black_3;
+}
+
+.texto-galeria {
+    font-family: $font_family_bad_script;
+    font-size: 2.2rem;
+    font-weight:900;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    color: $color_custom_black_3;
+}
+
+.img-galeria {
+    @include sizes_100_percent;
+    object-fit: cover;
+    border-radius: $border_10px;
+    box-shadow: 0 0 25px $color_custom_black_2;
+}
+
+.container-galeria{
+     @include sizes_100_percent;
+}
+
+.renglon-imagen{
+    @include sizes_100_percent;
+    display: grid;
+    align-content: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 50%);
+    column-gap: 1.5rem;
+    row-gap: 1.5rem;
+}
+
+.link-imagen-galeria{
+    &:hover {
+        box-shadow: 0 0 25px $color_custom_black;
+    }
+}
+
+.main-galeria {
+    width: $percent_100;
+    height: 150vh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2,50%);
+    row-gap: 2rem;
+}

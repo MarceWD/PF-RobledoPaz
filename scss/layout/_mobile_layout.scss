@@ -1,0 +1,350 @@
+$percent_100: 100%;
+$percent_30: 30%;
+$display_grid: grid;
+
+$padding_left_right_20px: 20px;
+$padding_top_bottom_10px: 10px;
+
+$color_custom_black:  rgba(36, 20, 1);
+$color_orange:  rgb(250, 189, 59);
+$color_orange_dark: rgb(203, 131, 64);
+$color_white: white;
+$color_custom_white:  rgb(255, 249, 241);
+
+$font_family_edu_cursive: "Edu TAS Beginner", cursive;
+
+$hide: none;
+$show: block;
+
+@mixin sizes_100_percent{
+    width: $percent_100;
+    height: $percent_100;
+}
+
+@mixin sizes_30_percent{
+    width: $percent_30;
+    height: $percent_30;
+}
+
+.main-galeria {
+    width: $percent_100;
+    height: 150vh;
+    display: $display_grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2,50%);
+    row-gap: 2rem;
+}
+
+.div-menu-mobile{
+    display: none;
+}
+
+/* estilos de mobile */
+
+@media screen and (max-width:576px){
+    header{
+        justify-content: space-between;
+    }
+
+    /*Media queries utilizados en la seccion galeria*/
+
+    .main-galeria{
+        @include sizes_100_percent;
+        display: $display_grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2,50%);
+        column-gap: 1.5rem;
+    }
+
+    main{
+
+        .slogan-galeria{
+            @include sizes_100_percent;
+            display: $display_grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(2, 18%) 3fr;
+            margin: 0;
+    
+        }
+
+        .background-galeria{
+            padding-top:50px;
+            padding-left: $padding_left_right_20px;
+            padding-right: $padding_left_right_20px;
+            padding-bottom: 80px;
+            background-position: -150px;
+            height: 100vh;
+        }
+
+        .titulo-galeria{
+            grid-row: span 2;
+        }
+
+        .texto-galeria{
+            grid-row: span 2;
+        }
+
+        .renglon-imagen{
+            @include sizes_100_percent;
+            display: $display_grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4,25%);
+            column-gap: 1.5rem;
+            row-gap: 1.5rem;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .img-galeria{
+            @include sizes_100_percent;
+            display: cover;
+        }
+
+        .img-cuatro{
+            grid-column: span 2;
+        }
+
+        .boton-order-galeria{
+            font-family: "Poetsen One", sans-serif;
+            font-size: 1.2rem;
+            color: $color_custom_black; 
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            background-color: $color_orange;
+            padding-top: $padding_top_bottom_10px;
+            padding-bottom: $padding_top_bottom_10px;
+            padding-left: $padding_left_right_20px;
+            padding-right: $padding_left_right_20px;
+            border-radius: 10px;
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-top: 30px;
+            align-content: center;
+        }
+
+    }
+
+
+    footer{
+        .cont-footer{
+            @include sizes_100_percent;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(1, 100%);
+            margin-top: 150px;
+            column-gap: 1rem;
+            row-gap: 1rem;
+            padding-top: 2cqb;
+            padding-bottom: 20px;
+            
+        }
+
+        .logo-footer{
+            width: $percent_100 + 50%;
+            height: $percent_100;
+            object-fit: contain;
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+
+        .links-footer{
+            width: $percent_100;
+    
+            grid-column: span 1;
+        }
+
+        .rs-footer{
+            grid-column: span 1;
+        }
+
+        .text-footer{
+            padding: 3px;
+        }
+
+        .rs-footer{
+            .siguenos-rs-footer{
+                .text-footer{
+                    display: $hide;
+                }
+            } 
+        } 
+
+    }
+
+    .icon-sobre, .icon-corazon{
+        display: $hide;
+    }
+
+    .vertical-line{
+        display: $hide;
+    }
+
+    .redes-icons{
+        display: flex;
+        flex-direction: row;
+    } 
+
+    .redes-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .siguenos-text{
+        display: block;
+        text-decoration: none;
+        color: $color_white;
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+
+    .icon-instagram{
+        @include sizes_30_percent;
+    }
+
+    .icon-facebook{
+        @include sizes_30_percent;
+    }
+
+    .icon-whatsapp{
+        @include sizes_30_percent;
+    }
+
+    .text-footer-wa{
+        text-align: center;
+    }
+
+
+    .siguenos-rs-footer{
+        margin-right: 10px;
+    }
+
+    /*FIN - Media queries utilizados en la seccion galeria*/
+
+    /*Media queries utilizados en la seccion Somos*/
+
+    .cont-valores{
+        @include sizes_100_percent;
+        display: $display_grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 1rem;
+        row-gap: 4rem;
+    }
+
+    .valores-container{
+        width: $percent_100;
+    }
+
+
+    /*FIN - Media queries utilizados en la seccion Somos*/
+
+
+    /*Media queries utilizados en la seccion Alimentos*/
+    .youtube-frame{
+        width: 90%;
+
+    }
+    /*FIN - Media queries utilizados en la seccion Alimentos*/
+
+
+    .cont-logo {
+        width: $percent_100;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+    }
+
+    .slogan{
+        width: 90%;
+        border-radius: 10px;
+        align-items: center;
+        
+    }
+
+    .slogantext{
+        color: $color_white;
+        font-family: $font_family_edu_cursive;
+        font-weight:500;
+        padding-top: 20px;  
+        padding-left: 10px;
+        text-align: center;
+    }
+
+    .button-order-slogan{
+        margin-left: 20%;
+    }
+
+    .cont-alimentos{
+        @include sizes_100_percent;
+        display: $display_grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 1rem;
+        row-gap: 1rem;
+        padding: 20px;
+    }
+
+    .card-alimentos{
+        @include sizes_100_percent;
+        margin: 0px;
+    }
+
+    .titulo-alimento{
+        font-size: 1rem;
+    }
+
+    .cont-pasos-pedido{
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .div-menu{
+        display: none;
+    }
+
+    .div-menu-mobile{
+        display: $show;
+        margin-bottom: 100px;
+    }
+
+    .navbar{
+        background-color: $color_orange_dark;
+    }
+    
+    .title-brand{
+        padding-top: var(--bs-navbar-brand-padding-y);
+        padding-bottom: var(--bs-navbar-brand-padding-y);
+        margin-right: var(--bs-navbar-brand-margin-end);
+        font-size: var(--bs-navbar-brand-font-size);
+        color: $color_white;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+
+    .contacto-form{
+        width: 100%;
+        margin-top: 0px;
+    }
+    
+
+    .offcanvas-body{
+        background-color: $color_custom_white;
+    }
+    
+    .offcanvas-header{
+        background-color: $color_orange_dark;
+    }
+
+    .offcanvas-title{
+        color: $color_white;
+    }
+}
+
+
+

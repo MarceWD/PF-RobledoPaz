@@ -1,0 +1,59 @@
+$margin_20px: 20px;
+$margin_30px: 30px;
+$margin_80px: 80px;
+$margin_60px: 60px;
+$padding_40px: 40px;
+$padding_2_percent: 2%;
+
+$font_family_bad_script: "Bad Script", cursive;
+$font_size_1_3_rem: 1.3rem;
+$text_align_center: center;
+$text_align_justify: justify;
+
+$color_custom_black: rgb(36, 20, 1);
+
+.titulo-laabuelalila {
+    text-align: $text_align_center;
+    margin-top: $margin_80px;
+    margin-bottom: $margin_30px;
+    font-family: $font_family_bad_script;
+    font-size: 2.5rem;
+    padding-left: $padding_2_percent;
+    padding-right: $padding_2_percent;
+}
+
+.text-quienessomos {
+    margin: $margin_30px;
+    text-align: $text_align_justify;
+    font-size: $font_size_1_3_rem;
+    line-height: 2;
+}
+
+.img-quienes-somos {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-top: $margin_80px;
+}
+
+.cont-valores {
+    display: inline-flex;
+    text-align: $text_align_center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: $margin_60px;
+}
+
+.titulo-valores { 
+    margin: $margin_20px;
+    font-weight: 600;
+    font-size: $font_size_1_3_rem;
+    color: $color_custom_black;
+}
+
+.texto-valores {
+    text-align: $text_align_justify;
+    padding-left: $padding_40px;
+    padding-right: $padding_40px;
+    color: $color_custom_black;
+}
