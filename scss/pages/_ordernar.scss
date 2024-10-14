@@ -1,68 +1,61 @@
-$percent_100: 100%;
-$border_10px: 10px;
-$padding_30px: 30px;
-$padding_10px: 10px;
-
-$justify_content_center: center;
-$display_flex: flex;
-
-$color_orange: rgba(241, 126, 18, 0.849);
-$color_custom_black: rgba(36, 20, 1);
+@use "../utils/colores" as colores;
+@use "../utils/tipografias" as tipografia;
+@use "../utils/estructura.scss" as estructura;
 
 @mixin sizes_100_percent{
-    width: $percent_100;
-    height: $percent_100;
+    width: estructura.$percent_100;
+    height: estructura.$percent_100;
 }
 
 .contacto {
     display: grid;
-    grid-template-columns: $percent_100;
+    grid-template-columns: estructura.$percent_100;
     grid-template-rows: repeat(2, 50%);
-    background-color: $color_orange;
-    border-radius: $border_10px;
-    padding: $padding_30px;
+    background-color: colores.$color_orange;
+    border-radius: estructura.$border_10px;
+    padding: estructura.$padding_30px;
 }
 
 .contacto-container{
     @include sizes_100_percent;
-    display: $display_flex;
-    justify-content: $justify_content_center;
+    display: estructura.$display_flex;
+    justify-content: estructura.$center;
 }
 
 .contacto-iconos {
-    display: $display_flex;
+    display: estructura.$display_flex;
     flex-direction: column;
-    justify-content: $justify_content_center;
+    justify-content: estructura.$center;
     align-items: center;
-    padding: $padding_10px;
+    padding: estructura.$padding_10px;
 }
 
 .text-contacto {
     font-size: 2.5rem;
-    color: $color_custom_black;
+    color: colores.$color_custom_black_3;
     text-decoration: none;
 }
 
 .contacto-form{
-    width: calc($percent_100/2);
+    width: calc(estructura.$percent_100/2);
     margin: 50px;
 }
 
 .form-container{
     @include sizes_100_percent;
-    display: $display_flex;
-    justify-content: $justify_content_center;
+    display: estructura.$display_flex;
+    justify-content: estructura.$center;
 }
 
 .button-form{
-    width: $percent_100;
-    display: $display_flex;
-    justify-content: $justify_content_center;
+    width: estructura.$percent_100;
+    display: estructura.$display_flex;
+    justify-content: estructura.$center;
 }
 
 .btn-primary{
     &:hover, &:active, &:visited {
-        background-color: $color_orange !important;
-        border-color: $color_custom_black !important;
+        background-color: colores.$color_orange !important;
+        border-color: colores.$color_custom_black_3 !important;
     }
 }

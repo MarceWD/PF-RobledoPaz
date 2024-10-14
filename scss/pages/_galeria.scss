@@ -1,26 +1,10 @@
-$percent_100: 100%;
-$padding_10px: 10px;
-$padding_30px: 30px;
-$padding_20px: 20px;
-
-$border_10px: 10px;
-$margin_30px: 30px;
-$margin_60px: 60px;
-$percent_35: 35%;
-
-$color_custom_white:  rgba(255, 255, 255, 0.705);
-$color_orange_light: rgb(250, 189, 59);
-$color_white: white;
-$color_cutom_black: rgba(0, 0, 0, 0.486);
-$color_custom_black_2: rgba(88, 88, 88, 0.486);
-$color_custom_black_3: rgba(36, 20, 1);
-
-$font_family_poetsen_one: "Poetsen One", sans-serif;
-$font_family_bad_script: "Bad Script", cursive;
+@use "../utils/colores" as colores;
+@use "../utils/tipografias" as tipografia;
+@use "../utils/estructura.scss" as estructura;
 
 @mixin sizes_100_percent{
-    width: $percent_100;
-    height: $percent_100;
+    width: estructura.$percent_100;
+    height: estructura.$percent_100;
 }
 
 .background-galeria {
@@ -33,35 +17,35 @@ $font_family_bad_script: "Bad Script", cursive;
 }
 
 .slogan-galeria {
-    background-color: $color_custom_white;
+    background-color: colores.$color_custom_white;
     height: 400px;
     width: 500px;
-    margin: $margin_60px;
-    border-radius: $border_10px;
+    margin: estructura.$margin_60px;
+    border-radius: estructura.$border_10px;
     text-align: center;
     display: inline-flex;
     flex-direction: column;
-    padding: $padding_30px;
+    padding: estructura.$padding_30px;
 }
 
 .boton-order-galeria {
-    font-family: $font_family_poetsen_one;
+    font-family: tipografia.$font_family_poetsen_one;
     font-size: 1.2rem;
-    color: $color_custom_black_3; 
+    color: colores.$color_custom_black_3; 
     letter-spacing: 1.5px;
     text-decoration: none;
-    background-color: $color_orange_light;
-    padding-top: $padding_10px;
-    padding-bottom: $padding_10px;
-    padding-left: $padding_20px;
-    padding-right: $padding_20px;
-    border-radius: $border_10px;
-    margin-left: $percent_35;
-    margin-right: $percent_35;
-    margin-top: $margin_30px;
+    background-color: colores.$color_orange_light;
+    padding-top: estructura.$padding_10px;
+    padding-bottom: estructura.$padding_10px;
+    padding-left: estructura.$padding_20px;
+    padding-right: estructura.$padding_20px;
+    border-radius: estructura.$border_10px;
+    margin-left: estructura.$percent_35;
+    margin-right: estructura.$percent_35;
+    margin-top: estructura.$margin_30px;
 
     &:hover {
-        box-shadow: 0 0 25px $color_white;
+        box-shadow: 0 0 25px colores.$color_white;
         text-decoration: underline;
         transform: scale(1.2, 1.2);
         transition: 0.3s ease;
@@ -69,27 +53,27 @@ $font_family_bad_script: "Bad Script", cursive;
 }
 
 .titulo-galeria {
-    font-family: $font_family_bad_script;
+    font-family: tipografia.$font_family_bad_script;
     font-size: 1.7rem;
     font-weight: 700;
     letter-spacing: 1px;
-    color: $color_custom_black_3;
+    color: colores.$color_custom_black_3;
 }
 
 .texto-galeria {
-    font-family: $font_family_bad_script;
+    font-family: tipografia.$font_family_bad_script;
     font-size: 2.2rem;
     font-weight:900;
     letter-spacing: 1px;
     margin-top: 20px;
-    color: $color_custom_black_3;
+    color: colores.$color_custom_black_3;
 }
 
 .img-galeria {
     @include sizes_100_percent;
     object-fit: cover;
-    border-radius: $border_10px;
-    box-shadow: 0 0 25px $color_custom_black_2;
+    border-radius: estructura.$border_10px;
+    box-shadow: 0 0 25px colores.$color_custom_black_2;
 }
 
 .container-galeria{
@@ -110,14 +94,14 @@ $font_family_bad_script: "Bad Script", cursive;
 
 .link-imagen-galeria{
     &:hover {
-        box-shadow: 0 0 25px $color_custom_black;
+        box-shadow: 0 0 25px colores.$color_custom_black;
         transform: scale(1.1, 1.1);
         transition: 0.5s ease;
     }
 }
 
 .main-galeria {
-    width: $percent_100;
+    width: estructura.$percent_100;
     height: 150vh;
     display: grid;
     grid-template-columns: repeat(1, 1fr);

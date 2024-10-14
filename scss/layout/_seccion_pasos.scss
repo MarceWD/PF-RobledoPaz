@@ -1,32 +1,28 @@
-$color_orange: rgb(203, 131, 64);
-$color_custom_black_alpha: rgba(0, 0, 0, 0.438); 
-$color_white: white;
-$color_custom_black: rgb(36, 20, 1);
-
-$percent_100: 100%;
+@use "../utils/colores" as colores;
+@use "../utils/estructura.scss" as estructura;
 
 /* seccion de pasos para realizar tu pedido*/
 .cont-pasos-pedido {
-    background-color: $color_orange;
-    width: $percent_100;
-    height: $percent_100;
+    background-color: colores.$color_orange;
+    width: estructura.$percent_100;
+    height: estructura.$percent_100;
     margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 100%;
     row-gap: 1rem;
-    align-items: center;
-    justify-content: center;
+    align-items: estructura.$center;
+    justify-content: estructura.$center;
 }
 
 .cont-pasos {
-    background-color: $color_white;
+    background-color: colores.$color_white;
     width: 90%;
     height: 90%;
     border-radius: 10px;
     margin: 20px;
-    text-align: center;
-    box-shadow: 0 0 15px $color_custom_black_alpha;
+    text-align: estructura.$center;
+    box-shadow: 0 0 15px colores.$color_custom_black_alpha;
 }
 
 .titulo-pasos {
@@ -39,6 +35,6 @@ $percent_100: 100%;
     padding-left: 15px;
     padding-right: 15px;
     font-size: 1.2rem;
-    color: $color_custom_black;
+    color: colores.$color_custom_black_3;
 }
 /* finaliza la seccion de pasos para realizar tu pedido*/

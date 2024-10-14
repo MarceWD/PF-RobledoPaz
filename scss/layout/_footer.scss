@@ -1,29 +1,26 @@
-$color_orange: rgb(203, 131, 64);
-$color_white: white;
-
-$margin_100px: 100px;
-$percent_100: 100%;
+@use "../utils/colores" as colores;
+@use "../utils/estructura.scss" as estructura;
 
 @mixin sizes_100_percent{
-    width: $percent_100;
-    height: $percent_100;
+    width: estructura.$percent_100;
+    height: estructura.$percent_100;
 }
 
 
 /* seccion del footer*/
 .cont-footer {
-    background-color: $color_orange;
-    margin-top: 100px;
+    background-color: colores.$color_orange;
+    margin-top: estructura.$margin_100px;
     @include sizes_100_percent;
     display: grid;
-    align-content: center;
+    align-content: estructura.$center;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, 100%);
     column-gap: 1rem;
 }
 
 .logo-footer {
-    padding: calc($margin_100px/5);
+    padding: calc(estructura.$margin_100px/5);
 }
 
 .links-footer {
@@ -34,7 +31,7 @@ $percent_100: 100%;
 
 .text-footer {
     text-decoration: none;
-    color: $color_white;
+    color: colores.$color_white;
     font-size: 1rem;
     letter-spacing: 1px;
 }
@@ -45,7 +42,7 @@ $percent_100: 100%;
 
 .text-footer-wa{
     text-decoration: none;
-    color: $color_white;
+    color: colores.$color_white;
     font-size: 1rem;
     letter-spacing: 1px;
 }
@@ -61,23 +58,23 @@ $percent_100: 100%;
 .rs-footer {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: estructura.$center;
+    align-items: estructura.$center;
 }
 
 .vertical-line {
     border-width: 1px;
     width: 1px;
     border-style: solid;
-    border-color: $color_white;
-    height: calc($percent_100/2);
+    border-color: colores.$color_white;
+    height: calc(estructura.$percent_100/2);
     margin: 15px;
 }
 
 .siguenos-rs-footer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: estructura.$center;
+    align-items: estructura.$center;
 }
 /* termina seccion del footer*/

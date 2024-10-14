@@ -1,42 +1,28 @@
-$percent_100: 100%;
-$percent_30: 30%;
-$display_grid: grid;
-
-$padding_left_right_20px: 20px;
-$padding_top_bottom_10px: 10px;
-
-$color_custom_black:  rgba(36, 20, 1);
-$color_orange:  rgb(250, 189, 59);
-$color_orange_dark: rgb(203, 131, 64);
-$color_white: white;
-$color_custom_white:  rgb(255, 249, 241);
-
-$font_family_edu_cursive: "Edu TAS Beginner", cursive;
-
-$hide: none;
-$show: block;
+@use "../utils/colores" as colores;
+@use "../utils/tipografias" as tipografia;
+@use "../utils/estructura.scss" as estructura;
 
 @mixin sizes_100_percent{
-    width: $percent_100;
-    height: $percent_100;
+    width: estructura.$percent_100;
+    height: estructura.$percent_100;
 }
 
 @mixin sizes_30_percent{
-    width: $percent_30;
-    height: $percent_30;
+    width: estructura.$percent_30;
+    height: estructura.$percent_30;
 }
 
 .main-galeria {
-    width: $percent_100;
+    width: estructura.$percent_100;
     height: 150vh;
-    display: $display_grid;
+    display: estructura.$display_grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(2,50%);
     row-gap: 2rem;
 }
 
 .div-menu-mobile{
-    display: none;
+    display: estructura.$hide;
 }
 
 /* estilos de mobile */
@@ -50,7 +36,7 @@ $show: block;
 
     .main-galeria{
         @include sizes_100_percent;
-        display: $display_grid;
+        display: estructura.$display_grid;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(2,50%);
         column-gap: 1.5rem;
@@ -60,7 +46,7 @@ $show: block;
 
         .slogan-galeria{
             @include sizes_100_percent;
-            display: $display_grid;
+            display: estructura.$display_grid;
             grid-template-columns: repeat(1, 1fr);
             grid-template-rows: repeat(2, 18%) 3fr;
             margin: 0;
@@ -69,8 +55,8 @@ $show: block;
 
         .background-galeria{
             padding-top:50px;
-            padding-left: $padding_left_right_20px;
-            padding-right: $padding_left_right_20px;
+            padding-left: estructura.$padding_20px;
+            padding-right: estructura.$padding_20px;
             padding-bottom: 80px;
             background-position: -150px;
             height: 100vh;
@@ -86,13 +72,13 @@ $show: block;
 
         .renglon-imagen{
             @include sizes_100_percent;
-            display: $display_grid;
+            display: estructura.$display_grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(4,25%);
             column-gap: 1.5rem;
             row-gap: 1.5rem;
-            padding-left: 10px;
-            padding-right: 10px;
+            padding-left: estructura.$padding_10px;
+            padding-right: estructura.$padding_10px;
         }
 
         .img-galeria{
@@ -107,19 +93,19 @@ $show: block;
         .boton-order-galeria{
             font-family: "Poetsen One", sans-serif;
             font-size: 1.2rem;
-            color: $color_custom_black; 
+            color: colores.$color_custom_black_3; 
             letter-spacing: 1.5px;
             text-decoration: none;
-            background-color: $color_orange;
-            padding-top: $padding_top_bottom_10px;
-            padding-bottom: $padding_top_bottom_10px;
-            padding-left: $padding_left_right_20px;
-            padding-right: $padding_left_right_20px;
+            background-color: colores.$color_orange_light;
+            padding-top: estructura.$padding_10px;
+            padding-bottom: estructura.$padding_10px;
+            padding-left: estructura.$padding_20px;
+            padding-right: estructura.$padding_20px;
             border-radius: 10px;
             margin-left: 15%;
             margin-right: 15%;
             margin-top: 30px;
-            align-content: center;
+            align-content: estructura.$center;
         }
 
     }
@@ -128,27 +114,27 @@ $show: block;
     footer{
         .cont-footer{
             @include sizes_100_percent;
-            display: grid;
+            display: estructura.$display_grid;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(1, 100%);
             margin-top: 150px;
             column-gap: 1rem;
             row-gap: 1rem;
             padding-top: 2cqb;
-            padding-bottom: 20px;
+            padding-bottom: estructura.$padding_20px;
             
         }
 
         .logo-footer{
-            width: $percent_100 + 50%;
-            height: $percent_100;
+            width: estructura.$percent_100 + 50%;
+            height: estructura.$percent_100;
             object-fit: contain;
             grid-column: span 1;
             grid-row: span 1;
         }
 
         .links-footer{
-            width: $percent_100;
+            width: estructura.$percent_100;
     
             grid-column: span 1;
         }
@@ -164,7 +150,7 @@ $show: block;
         .rs-footer{
             .siguenos-rs-footer{
                 .text-footer{
-                    display: $hide;
+                    display: estructura.$hide;
                 }
             } 
         } 
@@ -172,11 +158,11 @@ $show: block;
     }
 
     .icon-sobre, .icon-corazon{
-        display: $hide;
+        display: estructura.$hide;
     }
 
     .vertical-line{
-        display: $hide;
+        display: estructura.$hide;
     }
 
     .redes-icons{
@@ -191,9 +177,9 @@ $show: block;
     }
 
     .siguenos-text{
-        display: block;
+        display: estructura.$show;
         text-decoration: none;
-        color: $color_white;
+        color: colores.$color_white;
         font-size: 1rem;
         letter-spacing: 1px;
     }
@@ -225,7 +211,7 @@ $show: block;
 
     .cont-valores{
         @include sizes_100_percent;
-        display: $display_grid;
+        display: estructura.$display_grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
         column-gap: 1rem;
@@ -233,7 +219,7 @@ $show: block;
     }
 
     .valores-container{
-        width: $percent_100;
+        width: estructura.$percent_100;
     }
 
 
@@ -249,14 +235,14 @@ $show: block;
 
 
     .cont-logo {
-        width: $percent_100;
+        width: estructura.$percent_100;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         margin-top: 50px;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: estructura.$padding_10px;
+        padding-right: estructura.$padding_10px;
 
     }
 
@@ -268,9 +254,9 @@ $show: block;
     }
 
     .slogantext{
-        color: $color_white;
-        font-family: $font_family_edu_cursive;
-        font-weight:500;
+        color: colores.$color_white;
+        font-family: tipografia.$font_family_edu_cursive;
+        font-weight: 500;
         padding-top: 20px;  
         padding-left: 10px;
         text-align: center;
@@ -282,7 +268,7 @@ $show: block;
 
     .cont-alimentos{
         @include sizes_100_percent;
-        display: $display_grid;
+        display: estructura.$display_grid;
         grid-template-columns: repeat(2, 50%);
         grid-template-rows: repeat(2, 1fr);
         column-gap: 1rem;
@@ -309,12 +295,12 @@ $show: block;
     }
 
     .div-menu-mobile{
-        display: $show;
+        display: estructura.$show;
         margin-bottom: 100px;
     }
 
     .navbar{
-        background-color: $color_orange_dark;
+        background-color: colores.$color_orange;
     }
     
     .title-brand{
@@ -322,27 +308,27 @@ $show: block;
         padding-bottom: var(--bs-navbar-brand-padding-y);
         margin-right: var(--bs-navbar-brand-margin-end);
         font-size: var(--bs-navbar-brand-font-size);
-        color: $color_white;
+        color: colores.$color_white;
         text-decoration: none;
         white-space: nowrap;
     }
 
     .contacto-form{
-        width: 100%;
+        width: estructura.$percent_100;
         margin-top: 0px;
     }
     
 
     .offcanvas-body{
-        background-color: $color_custom_white;
+        background-color: colores.$color_custom_white_2;
     }
     
     .offcanvas-header{
-        background-color: $color_orange_dark;
+        background-color: colores.$color_orange;
     }
 
     .offcanvas-title{
-        color: $color_white;
+        color: colores.$color_white;
     }
 }
 

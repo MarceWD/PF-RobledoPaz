@@ -1,24 +1,13 @@
-$color_orange: rgb(203, 131, 64);
-$color_orange_light:  rgb(250, 189, 59);
-$color_custom_black:rgba(36, 20, 1);
-$color_white: white;
-$color_blanchedalmond: blanchedalmond;
-
-$font_family_poetsen_sans:"Poetsen One", sans-serif;
-
-$display_flex: flex;
-
-$padding_top_bottom_5px: 5px;
-$padding_left_right_20px: 20px;
-$padding_top_bottom_10px: 10px;
-
+@use "../utils/colores" as colores;
+@use "../utils/tipografias" as tipografia;
+@use "../utils/estructura.scss" as estructura;
 
 /*barra de navegacion inicio*/
 
 /*background barra de navegacion*/
 .div-menu {
-    background-color: $color_orange;
-    display: $display_flex; 
+    background-color: colores.$color_orange;
+    display: estructura.$display_flex; 
     flex-direction: row;
     overflow: hidden; 
 }
@@ -27,11 +16,11 @@ $padding_top_bottom_10px: 10px;
 .cont-menu-left {
     width: 70%;
     justify-content: space-evenly;
-    display: $display_flex;
+    display: estructura.$display_flex;
     flex-direction: row;
     overflow: hidden;
-    padding-top: $padding_top_bottom_5px;
-    padding-bottom: $padding_top_bottom_5px;
+    padding-top: estructura.$padding_5px;
+    padding-bottom: estructura.$padding_5px;
 }
 
 /*contenedor menu derecho boton ordenar*/
@@ -40,26 +29,26 @@ $padding_top_bottom_10px: 10px;
     justify-content: right;
     display: flex;
     flex-direction: row-reverse;
-    padding-top: $padding_top_bottom_5px;
-    padding-bottom: $padding_top_bottom_5px;
+    padding-top: estructura.$padding_5px;
+    padding-bottom: estructura.$padding_5px;
 }
 
 .menu-order-button {
-    font-family: $font_family_poetsen_sans;
+    font-family: tipografia.$font_family_poetsen_one;
     font-size: 1.2rem;
-    color: $color_custom_black; 
+    color: colores.$color_custom_black_3; 
     letter-spacing: 1.5px;
     text-decoration: none;
-    background-color: $color_orange_light;
-    padding-top: $padding_top_bottom_10px;
-    padding-bottom: $padding_top_bottom_10px;
-    padding-left: $padding_left_right_20px;
-    padding-right: $padding_left_right_20px;
+    background-color: colores.$color_orange_light;
+    padding-top: estructura.$padding_10px;
+    padding-bottom: estructura.$padding_10px;
+    padding-left: estructura.$padding_20px;
+    padding-right: estructura.$padding_20px;
     border-radius: 10px;
     margin-right: 75px;
 
     &:hover{
-        box-shadow: 0 0 25px $color_white;
+        box-shadow: 0 0 25px colores.$color_white;
         text-decoration: underline;
         transform: scale(1.05,1.05);
         transition: 0.3s ease;
@@ -68,9 +57,9 @@ $padding_top_bottom_10px: 10px;
 
 /*botones de menu de barra de navegacion*/
 .style-menu {
-    font-family: $font_family_poetsen_sans;
+    font-family: tipografia.$font_family_poetsen_one;
     font-size: 1.2rem;
-    color: $color_white;
+    color: colores.$color_white;
     letter-spacing: 1.5px;
     padding: 20px;
 
@@ -79,34 +68,34 @@ $padding_top_bottom_10px: 10px;
     }
 
     &:hover{
-        color: $color_custom_black;
-        background-color: $color_blanchedalmond;
+        color: colores.$color_custom_black_3;
+        background-color: colores.$color_blanchedalmond;
         border-radius: 10px;
-        padding-top: $padding_top_bottom_10px;
-        padding-bottom: $padding_top_bottom_10px;
-        padding-left: $padding_left_right_20px;
-        padding-right: $padding_left_right_20px;
+        padding-top: estructura.$padding_10px;
+        padding-bottom: estructura.$padding_10px;
+        padding-left: estructura.$padding_20px;
+        padding-right: estructura.$padding_20px;
         text-decoration: underline;
     }
 
 }
 
 .style-menu-active {
-    font-family: $font_family_poetsen_sans;
+    font-family: tipografia.$font_family_poetsen_one;
     font-size: 1.2rem;
-    color: $color_custom_black;
+    color: colores.$color_custom_black_3;
     letter-spacing: 1.5px;
-    background-color:$color_blanchedalmond;
+    background-color: colores.$color_blanchedalmond;
     border-radius: 10px;
-    padding-top: $padding_top_bottom_10px;
-    padding-bottom: $padding_top_bottom_10px;
-    padding-left: $padding_left_right_20px;
-    padding-right: $padding_left_right_20px;
+    padding-top: estructura.$padding_10px;
+    padding-bottom: estructura.$padding_10px;
+    padding-left: estructura.$padding_20px;
+    padding-right: estructura.$padding_20px;
     text-decoration: underline;
 
     &:hover{
         text-decoration: underline;
-        color: $color_custom_black;
+        color: colores.$color_custom_black_3;
     }
 }
 

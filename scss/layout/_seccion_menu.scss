@@ -1,70 +1,63 @@
-$font_family_bad_script_cursive:"Bad Script", cursive;
-
-$percent_100: 100%;
-
-$color_custom_black_alpha: rgba(0, 0, 0, 0.438); 
-$color_custom_black:  rgb(36, 20, 1);
-$color_white: white;
-
-$margin_left_right_30px: 30px;
-$border_radius_left_right_10px: 10px;
+@use "../utils/colores" as colores;
+@use "../utils/tipografias" as tipografia;
+@use "../utils/estructura.scss" as estructura;
 
 /*título de MENÚ*/
 .titulo-menu {
-    text-align: center;
+    text-align: estructura.$center;
     margin-top: 95px;
-    font-family: $font_family_bad_script_cursive;
+    font-family: tipografia.$font_family_bad_script;
     font-size: 2.5rem;
     font-weight: bolder;
     letter-spacing: 2px;
-    color: $color_custom_black
+    color: colores.$color_custom_black_3
 }
 /*Termina título del manú*/
 
 /*Menú de alimentos*/
 .img-alimentos {
-    width: $percent_100;
+    width: estructura.$percent_100;
     height: 200px;
     object-fit: cover;
-    border-top-left-radius: $border_radius_left_right_10px;
-    border-top-right-radius: $border_radius_left_right_10px;
+    border-top-left-radius: estructura.$border_10px;
+    border-top-right-radius: estructura.$border_10px;
 }
 
 .card-alimentos {
     display: flex;
     flex-direction: column;
-    width: $percent_100;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 25px $color_custom_black_alpha;
-    margin-left: $margin_left_right_30px;
-    margin-right: $margin_left_right_30px;
-    border-radius: $border_radius_left_right_10px;
+    width: estructura.$percent_100;
+    justify-content: estructura.$center;
+    align-items: estructura.$center;
+    box-shadow: 0 0 25px colores.$color_custom_black_alpha;
+    margin-left: estructura.$margin_30px;
+    margin-right: estructura.$margin_30px;
+    border-radius: estructura.$border_10px;
 }
 
 .cont-alimentos {
-    width: $percent_100;
-    height: $percent_100;
+    width: estructura.$percent_100;
+    height: estructura.$percent_100;
     display: grid;
     grid-template-columns: repeat(4, 15%);
     column-gap: 2rem;
-    justify-content: center;
-    align-items: center;
+    justify-content: estructura.$center;
+    align-items: estructura.$center;
     margin-top: 40px;
 }
 
 .titulo-alimento {
     width: 100%;
-    overflow:hidden;
+    overflow: hidden;
     white-space: nowrap; /* Don't forget this one */
     text-overflow: ellipsis;
-    text-align: center;
+    text-align: estructura.$center;
     padding: 20px;
     font-size: 1.5rem;
     font-family: "Poppins", sans-serif;
     letter-spacing: 1px;
     font-weight: 500;
-    background-color: $color_white;
-    color: $color_custom_black;
+    background-color: colores.$color_custom_white_2;
+    color: colores.$color_custom_black_3;
 }
 /* termina menú de alimentos*/

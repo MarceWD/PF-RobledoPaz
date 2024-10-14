@@ -1,59 +1,49 @@
-$margin_20px: 20px;
-$margin_30px: 30px;
-$margin_80px: 80px;
-$margin_60px: 60px;
-$padding_40px: 40px;
-$padding_2_percent: 2%;
-
-$font_family_bad_script: "Bad Script", cursive;
-$font_size_1_3_rem: 1.3rem;
-$text_align_center: center;
-$text_align_justify: justify;
-
-$color_custom_black: rgb(36, 20, 1);
+@use "../utils/colores" as colores;
+@use "../utils/tipografias" as tipografia;
+@use "../utils/estructura.scss" as estructura;
 
 .titulo-laabuelalila {
-    text-align: $text_align_center;
-    margin-top: $margin_80px;
-    margin-bottom: $margin_30px;
-    font-family: $font_family_bad_script;
+    text-align: estructura.$center;
+    margin-top: estructura.$margin_80px;
+    margin-bottom: estructura.$margin_30px;
+    font-family: tipografia.$font_family_bad_script;
     font-size: 2.5rem;
-    padding-left: $padding_2_percent;
-    padding-right: $padding_2_percent;
+    padding-left: estructura.$padding_2_percent;
+    padding-right: estructura.$padding_2_percent;
 }
 
 .text-quienessomos {
-    margin: $margin_30px;
-    text-align: $text_align_justify;
-    font-size: $font_size_1_3_rem;
+    margin: estructura.$margin_30px;
+    text-align: estructura.$justify;
+    font-size: tipografia.$font_size_1_3_rem;
     line-height: 2;
 }
 
 .img-quienes-somos {
-    width: 100%;
+    width: estructura.$percent_100;
     height: 300px;
     object-fit: cover;
-    margin-top: $margin_80px;
+    margin-top: estructura.$margin_80px;
 }
 
 .cont-valores {
     display: inline-flex;
-    text-align: $text_align_center;
+    text-align: estructura.$center;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: $margin_60px;
+    margin-top: estructura.$margin_60px;
 }
 
 .titulo-valores { 
-    margin: $margin_20px;
+    margin: estructura.$margin_20px;
     font-weight: 600;
-    font-size: $font_size_1_3_rem;
-    color: $color_custom_black;
+    font-size: tipografia.$font_size_1_3_rem;
+    color: colores.$color_custom_black_3;
 }
 
 .texto-valores {
-    text-align: $text_align_justify;
-    padding-left: $padding_40px;
-    padding-right: $padding_40px;
-    color: $color_custom_black;
+    text-align: estructura.$justify;
+    padding-left: estructura.$padding_40px;
+    padding-right: estructura.$padding_40px;
+    color: colores.$color_custom_black_3;
 }
